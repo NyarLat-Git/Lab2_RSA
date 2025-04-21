@@ -1,0 +1,10 @@
+C:\Users\pc\Desktop\8 Семестр\CryptoProtocols\NyarLat-Git\Lab2_RSA\Lab2_RSA\bin\Debug\Lab2_RSA.exe.config
+C:\Users\pc\Desktop\8 Семестр\CryptoProtocols\NyarLat-Git\Lab2_RSA\Lab2_RSA\bin\Debug\Lab2_RSA.exe
+C:\Users\pc\Desktop\8 Семестр\CryptoProtocols\NyarLat-Git\Lab2_RSA\Lab2_RSA\bin\Debug\Lab2_RSA.pdb
+C:\Users\pc\Desktop\8 Семестр\CryptoProtocols\NyarLat-Git\Lab2_RSA\Lab2_RSA\obj\Debug\Lab2_RSA.csproj.AssemblyReference.cache
+C:\Users\pc\Desktop\8 Семестр\CryptoProtocols\NyarLat-Git\Lab2_RSA\Lab2_RSA\obj\Debug\Lab2_RSA.Form1.resources
+C:\Users\pc\Desktop\8 Семестр\CryptoProtocols\NyarLat-Git\Lab2_RSA\Lab2_RSA\obj\Debug\Lab2_RSA.Properties.Resources.resources
+C:\Users\pc\Desktop\8 Семестр\CryptoProtocols\NyarLat-Git\Lab2_RSA\Lab2_RSA\obj\Debug\Lab2_RSA.csproj.GenerateResource.cache
+C:\Users\pc\Desktop\8 Семестр\CryptoProtocols\NyarLat-Git\Lab2_RSA\Lab2_RSA\obj\Debug\Lab2_RSA.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\8 Семестр\CryptoProtocols\NyarLat-Git\Lab2_RSA\Lab2_RSA\obj\Debug\Lab2_RSA.exe
+C:\Users\pc\Desktop\8 Семестр\CryptoProtocols\NyarLat-Git\Lab2_RSA\Lab2_RSA\obj\Debug\Lab2_RSA.pdb
