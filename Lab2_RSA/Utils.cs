@@ -69,14 +69,31 @@ namespace Lab2_RSA
 
         public static string Decode(string encodedMessage)
         {
-            string result = "";
-            for (int i = 0; i < encodedMessage.Length; i += 3)
+            string decodedMessage = "";
+            string temp = "";
+
+            foreach (char ch in encodedMessage)
             {
-                int value = int.Parse(encodedMessage.Substring(i, 3));
-                result += (char)(value - 100);
+                temp += ch;
+
+                if (temp.Length >= 3)
+                {
+                    if (int.TryParse(temp, out int value))
+                    {
+                        char decodedChar = (char)(value - 100);
+                        decodedMessage += decodedChar;
+                        temp = "";
+                    }
+                    else
+                    {
+                        throw new FormatException($"Не удалось преобразовать \"{temp}\" в число.");
+                    }
+                }
             }
-            return result;
+
+            return decodedMessage;
         }
+
 
         public static List<BigInteger> EncryptBlocks(string input, BigInteger exp, BigInteger n)
         {

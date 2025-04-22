@@ -48,6 +48,8 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -78,6 +80,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Зашифровать";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -87,6 +90,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Расшифровать";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label1
             // 
@@ -206,21 +210,43 @@
             // 
             this.textBox7.Location = new System.Drawing.Point(93, 254);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(380, 20);
+            this.textBox7.Size = new System.Drawing.Size(338, 20);
             this.textBox7.TabIndex = 18;
             // 
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(93, 304);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(380, 20);
+            this.textBox8.Size = new System.Drawing.Size(338, 20);
             this.textBox8.TabIndex = 19;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(451, 252);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(62, 23);
+            this.button5.TabIndex = 20;
+            this.button5.Text = "Очистить";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(451, 302);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(62, 23);
+            this.button6.TabIndex = 21;
+            this.button6.Text = "Очистить";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(538, 409);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
@@ -270,6 +296,8 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 

@@ -78,5 +78,118 @@ namespace Lab2_RSA
 
 
     }
-}
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox5.Text = "";
+            textBox6.Text = "";
+
+            if (string.IsNullOrWhiteSpace(textBox2.Text) ||
+                string.IsNullOrWhiteSpace(textBox3.Text) ||
+                string.IsNullOrWhiteSpace(textBox4.Text))
+            {
+                MessageBox.Show("Введите или сгенерируйте p, q и e!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            BigInteger p = BigInteger.Parse(textBox2.Text);
+            BigInteger q = BigInteger.Parse(textBox3.Text);
+            BigInteger ee = BigInteger.Parse(textBox4.Text);
+            BigInteger n = p * q;
+
+            if (ee >= n)
+            {
+                ee = ee % n;
+            }
+
+            BigInteger phi = (p - 1) * (q - 1);
+
+            while (NOD(ee, phi) != 1)
+            {
+                ee++;
+                if (ee >= n)
+                {
+                    ee = ee % n;
+                }
+            }
+
+            textBox4.Text = ee.ToString();
+
+            BigInteger d = ObrMod(ee, phi);
+            textBox5.Text = d.ToString();
+            textBox6.Text = n.ToString();
+
+
+            string plainText = textBox7.Text;
+            string encodedText = Encode(plainText);
+            List<BigInteger> encryptedBlocks = EncryptBlocks(encodedText, ee, n);
+
+            string output = string.Join(" ", encryptedBlocks.Select(block => block.ToString()));
+            textBox8.Text = output.TrimEnd();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox5.Text = "";
+            textBox6.Text = "";
+
+            if (string.IsNullOrWhiteSpace(textBox2.Text) ||
+                string.IsNullOrWhiteSpace(textBox3.Text) ||
+                string.IsNullOrWhiteSpace(textBox4.Text))
+            {
+                MessageBox.Show("Введите или сгенерируйте p, q и e!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            BigInteger p = BigInteger.Parse(textBox2.Text);
+            BigInteger q = BigInteger.Parse(textBox3.Text);
+            BigInteger ee = BigInteger.Parse(textBox4.Text);
+
+            BigInteger n = p * q;
+
+            if (ee >= n)
+            {
+                ee = ee % n;
+            }
+
+            BigInteger phi = (p - 1) * (q - 1);
+
+            while (NOD(ee, phi) != BigInteger.One)
+            {
+                ee++;
+                if (ee >= n)
+                {
+                    ee = ee % n;
+                }
+            }
+
+            textBox4.Text = ee.ToString();
+
+
+            BigInteger d = ObrMod(ee, phi);
+            textBox5.Text = d.ToString();
+            textBox6.Text = n.ToString();
+
+            string encryptedText = textBox8.Text;
+            List<BigInteger> encryptedBlocks = ParseEncryptedText(encryptedText);
+
+            string decodedEncrypted = DecryptBlocks(encryptedBlocks, d, n);
+            string originalText = Decode(decodedEncrypted);
+
+
+            textBox7.Text = originalText;
+        
+
+    }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBox7.Text = "";
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            textBox8.Text = "";
+        }
+    }
 }
